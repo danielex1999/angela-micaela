@@ -15,12 +15,15 @@ body {
     flex-direction: column;
 }
 
+
+
 #cards {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 #notes {
@@ -32,11 +35,127 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-bottom: 20px;
 }
 
 .main-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#left-size {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+}
+
+#center-size {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#right-size {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first-section-notes {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+#first-section-notes:hover {
+    background-color: #e0e0e0;
+}
+
+/* Style for the images in the left section */
+#carta-image {
+    max-width: 40%;
+    height: auto;
+    margin-right: auto;
+    transform: rotate(30deg);
+}
+
+#melody-image {
+    max-width: 60%;
+    height: auto;
+    margin-left: auto;
+}
+
+#lirios-image {
+    max-width: 60%;
+    height: auto;
+    margin-left: auto;
+}
+
+#vela-image {
+    max-width: 40%;
+    margin-right: auto;
+    transform: rotate(-30deg);
+}
+
+/* Style for the images in the right section */
+#hello-kitty-image {
+    max-width: 80%;
+    height: auto;
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+#balage-image {
+    max-width: 70%;
+    height: auto;
+    margin-right: auto;
+}
+
+#psicologia-image {
+    max-width: 40%;
+    height: auto;
+    margin-left: auto;
+    transform: rotate(-30deg);
+    z-index: -1;
+}
+
+/* Style inside the main container */
+#main-image {
+    max-width: 70%;
+    height: auto;
+}
+
+iframe {
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    max-width: 70%;
+
 }
