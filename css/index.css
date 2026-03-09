@@ -162,14 +162,15 @@ iframe {
 
 /* Vista por Iphone */
 @media (max-width: 600px) {
-#left-size {
-    width: 20%;
-}
+    #left-size {
+        width: 20%;
+    }
 
-#center-size {
-    width: 50%;
-}
+    #center-size {
+        width: 50%;
+    }
 
-#right-size {
-    width: 20%
+    #right-size {
+        width: 20%
+    }
 }
