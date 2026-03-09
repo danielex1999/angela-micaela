@@ -37,3 +37,13 @@ body {
     border-radius: 50%;
     padding: 10px;
 }
+
+
+/* Para iPhone 14 */
+
+@media (max-width: 390px) {
+    .popup-content {
+        width: 90%;
+        height: 80%;
+    }
+}
