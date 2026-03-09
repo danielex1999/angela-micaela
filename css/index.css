@@ -15,7 +15,11 @@ body {
     flex-direction: column;
 }
 
-
+.container {
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+}
 
 #cards {
     width: 100%;
