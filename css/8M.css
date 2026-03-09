@@ -34,4 +34,25 @@ p {
     margin-bottom: 10px;
 }
 
+.container {
+    width: 100%;
+    height: 100%;
+}
 /*Para iphone 8*/
+@media (max-width: 375px) {
+    img#mujer-image {
+        max-width: 60%;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    p {
+        font-size: 0.9em;
+    }
+}
