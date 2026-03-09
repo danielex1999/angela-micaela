@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}   
 img#mujer-image {
     max-width: 40%;
 }
@@ -26,22 +34,4 @@ p {
     margin-bottom: 10px;
 }
 
-/*Para iphone 14*/
-@media (max-width: 390px) {
-    body {
-        font-size: 12px;
-    }
-    
-    h1 {
-        font-size: 1.8em;
-    }
-    
-    h2 {
-        font-size: 1.2em;
-    }
-    
-    img#mujer-image {
-        max-width: 80%;
-        
-    }
-}
+/*Para iphone 8*/

@@ -10,24 +10,24 @@
     align-items: center;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    width: 100%;
-}
 
 .popup-content {
     background-color: #fff5f3;
-    width: 70%;
-    height: 70%;
+    position: relative;
+    width: 90%;
+    height: 90%;
     border-radius: 20px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 .popup-frame {
     width: 100%;
     height: 100%;
-    border: none;
     border-radius: 15px;
 }
 
@@ -39,6 +39,12 @@ body {
     padding: 10px;
 }
 
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
 
 /* Para iPhone 14 */
 
