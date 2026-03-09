@@ -173,4 +173,14 @@ iframe {
     #right-size {
         width: 20%
     }
+    iframe#spotify-iframe {
+     display: none;
+    }
+    img#spotify-code {
+        display: block !important;
+        max-width: 70%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
 }
