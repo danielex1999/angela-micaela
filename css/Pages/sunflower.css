@@ -356,4 +356,9 @@ body {
         width: auto;
         height: 350px;
     }
+
+    .wrapper {
+        width: auto;
+        height: auto;
+    }
 }
