@@ -347,16 +347,7 @@ body {
 }
 
 @media (max-width: 600px) {
-.wrap text {
+    .wrapper .text {
         font-size: 25px;
-    }
-
-    .download-section {
-        margin-top: 400px;
-    }
-
-    .gif-container img {
-        width: 150px;
-        height: 350px;
     }
 }
