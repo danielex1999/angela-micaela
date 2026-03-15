@@ -1,4 +1,17 @@
 /* Vista 1024x768 */
+@media (max-width: 1024px) {
+    iframe#spotify-iframe {
+        display: none;
+    }
+
+    img#spotify-code {
+        display: block !important;
+        max-width: 70%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+}
 
 /* Vista por Iphone */
 @media (max-width: 600px) {
