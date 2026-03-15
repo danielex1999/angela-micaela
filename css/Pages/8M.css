@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: Dancing;
-    src: url(../assets/fonts/Dancing\ Script/DancingScript-Regular.ttf);
+    src: url(/assets/fonts/Dancing/DancingScript-VariableFont_wght.ttf);
 }
 
 html,
 body {
-    font-family: 'Dancing', cursive;
+    font-family: Dancing, cursive;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -47,9 +47,7 @@ p {
 
 /*Para iphone 8*/
 @media (max-width: 375px) {
-    .container {
-        height: 100%;
-    }
+
 
     img#mujer-image {
         max-width: 60%;

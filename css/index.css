@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: Dancing;
-  src: url(../assets/fonts/Dancing\ Script/DancingScript-Regular.ttf);
+    font-family: Dancing;
+    src: url(../assets/fonts/Dancing/DancingScript-VariableFont_wght.ttf);
 }
 
 body {
@@ -223,7 +223,7 @@ iframe {
     margin-top: 20px;
     border: none;
     border-radius: 12px;
-    max-width: 70%;
+    max-width: 90%;
 
 }
 
