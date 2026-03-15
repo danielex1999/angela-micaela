@@ -53,4 +53,8 @@
         width: 90%;
         height: 80%;
     }
+
+    .close{
+        font-size: 10px
+    }
 }
