@@ -350,4 +350,9 @@ body {
     .wrapper .text {
         font-size: 25px;
     }
+
+    .gif-container img {
+        width: 150px;
+        height: 350px;
+    }
 }
