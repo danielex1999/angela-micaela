@@ -1,0 +1,50 @@
+/* Vista 1024x768 */
+
+/* Vista por Iphone */
+@media (max-width: 600px) {
+    #left-size {
+        width: 20%;
+    }
+
+    #center-size {
+        width: 50%;
+    }
+
+    #right-size {
+        width: 20%
+    }
+
+    iframe#spotify-iframe {
+        display: none;
+    }
+
+    img#spotify-code {
+        display: block !important;
+        max-width: 70%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #left-size-images,
+    #right-size-images {
+        display: none;
+    }
+
+    .momentos-images {
+        flex-direction: column;
+        margin: 20px
+    }
+
+    #center-size-images {
+        width: 80%;
+    }
+    p{
+        font-size: 12px;
+    }
+}

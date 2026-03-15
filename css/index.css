@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Dancing;
+  src: url(../assets/fonts/Dancing\ Script/DancingScript-Regular.ttf);
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Dancing', cursive;
     width: 100%;
     background-color: #f0f0f0;
     color: #333333;
@@ -242,49 +247,3 @@ iframe {
     border-radius: 20px;
 }
 
-/* Vista por Iphone */
-@media (max-width: 600px) {
-    #left-size {
-        width: 20%;
-    }
-
-    #center-size {
-        width: 50%;
-    }
-
-    #right-size {
-        width: 20%
-    }
-
-    iframe#spotify-iframe {
-        display: none;
-    }
-
-    img#spotify-code {
-        display: block !important;
-        max-width: 70%;
-        height: auto;
-        margin-top: 20px;
-        border-radius: 12px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    #left-size-images,
-    #right-size-images {
-        display: none;
-    }
-
-    .momentos-images {
-        flex-direction: column;
-        margin: 20px
-    }
-
-    #center-size-images {
-        width: 80%;
-    }
-
-}
