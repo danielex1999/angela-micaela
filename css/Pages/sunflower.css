@@ -349,10 +349,11 @@ body {
 @media (max-width: 600px) {
     .wrapper .text {
         font-size: 25px;
+        width: auto;
     }
 
     .gif-container img {
-        width: 150px;
+        width: auto;
         height: 350px;
     }
 }
