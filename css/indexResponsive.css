@@ -1,3 +1,27 @@
+/* Vista 1440x900 */
+@media (max-width: 1440px) {
+    #center-size-images {
+        width: 70%;
+    }
+
+
+    .momentos-images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .momentos-images img {
+        width: 100%;
+    }
+
+    #chocolate-cake-image,
+    #maki-image,
+    #girasol {
+        margin-left: 0;
+        margin-right: 0;
+        margin: 10px;
+    }
+}
+
 /* Vista 1024x768 */
 @media (max-width: 1024px) {
     iframe#spotify-iframe {
@@ -45,7 +69,9 @@
     }
 
     #left-size-images,
-    #right-size-images {
+    #right-size-images,
+    #left-size-messages,
+    #right-size-messages {
         display: none;
     }
 

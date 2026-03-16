@@ -253,6 +253,11 @@ iframe {
     margin-right: auto;
 }
 
+#girasol {
+    max-width: 40%;
+    height: auto;
+}
+
 /* Style for the momentos images in the main container*/
 .momentos-images img {
     width: 150px;
@@ -265,15 +270,26 @@ iframe {
 
 
 /* Style for the messages section */
+
+#left-size-messages, #right-size-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+}
 #center-size-messages {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 75%;
 }
 
 .messages-container {
     margin-bottom: 50px;
     width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .messageGridContainer {
@@ -340,4 +356,10 @@ iframe {
     width: max-content;
     text-align: center;
     cursor: pointer;
+}
+
+#lirios,#rosas,#margaritas {
+    max-width: 60%;
+    height: auto;
+    margin: 10px;
 }
