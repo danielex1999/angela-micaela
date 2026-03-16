@@ -17,7 +17,12 @@ const imagenes = [
     "🎂 Kitty cumpleañera.jpeg",
     "💇‍♀️ Balayage.jpeg",
     "🥂 Sorpresa romántica.jpeg",
-    "🎄 Primer encuentro.jpeg"
+    "🎄 Primer encuentro.jpeg",
+    "💐 Ramo de flores.jpeg",
+    "🍮 Antojitos.jpeg",
+    "🍴 Arandanos.jpeg",
+    "🎈 Globos.jpeg",
+    "🌺 Lirios.jpeg"
 ];
 
 
