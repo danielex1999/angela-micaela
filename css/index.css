@@ -273,6 +273,7 @@ iframe {
 
 .messages-container {
     margin-bottom: 50px;
+    width: 90%;
 }
 
 .messageGridContainer {
