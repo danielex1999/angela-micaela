@@ -50,9 +50,9 @@
     }
 
     .momentos-images {
-        flex-direction: column;
-        margin: 20px
-    }
+    grid-template-columns: repeat(2, 150px);
+    gap: 30px;
+}
 
     #center-size-images {
         width: 80%;

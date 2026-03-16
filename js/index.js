@@ -8,6 +8,8 @@ function cerrarNotas() {
 
 
 
+const cantidad = window.innerWidth < 600 ? 4 : 3;
+
 
 const ruta = "assets/img/moments/";
 
@@ -21,17 +23,22 @@ const imagenes = [
 
 imagenes.sort(() => Math.random() - 0.5);
 
-const contenedores = document.querySelectorAll(".img-container-moment");
+// cantidad de imágenes que quieres mostrar
+const contenedor = document.querySelector(".momentos-images");
 
-contenedores.forEach((container, index) => {
+for (let i = 0; i < cantidad; i++) {
 
-    const img = container.querySelector("img");
-    const p = container.querySelector("p");
+    const div = document.createElement("div");
+    div.className = "img-container-moment";
 
-    const nombreArchivo = imagenes[index];
+    const img = document.createElement("img");
+    img.src = ruta + imagenes[i];
 
-    img.src = ruta + nombreArchivo;
+    const p = document.createElement("p");
+    p.textContent = imagenes[i].replace(/\.[^/.]+$/, "");
 
-    let nombre = nombreArchivo.split(".")[0];
-    p.textContent = nombre;
-});
+    div.appendChild(img);
+    div.appendChild(p);
+
+    contenedor.appendChild(div);
+}
