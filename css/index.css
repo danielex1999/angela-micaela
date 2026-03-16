@@ -186,9 +186,11 @@ body {
 }
 
 .momentos-images {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Style for the images in the right section */
@@ -242,8 +244,9 @@ iframe {
 
 /* Style for the momentos images in the main container*/
 .momentos-images img {
-    max-width: 70%;
-    margin-bottom: 20px;
+    width: 150px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
-
