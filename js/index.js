@@ -16,7 +16,7 @@ const ruta = "assets/img/moments/";
 const imagenes = [
     "🎂 Kitty cumpleañera.jpeg",
     "💇‍♀️ Balayage.jpeg",
-    "🥂 Sorpresa romántica.jpeg",
+    "🥂 Detalle romantico.jpeg",
     "🎄 Primer encuentro.jpeg",
     "💐 Ramo de flores.jpeg",
     "🍮 Antojitos.jpeg",

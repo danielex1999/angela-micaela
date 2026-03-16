@@ -23,6 +23,11 @@ body {
 
 }
 
+.dancing{
+    font-family: 'Dancing', cursive;
+}
+
+
 .container {
     width: 100%;
     padding: 20px;
