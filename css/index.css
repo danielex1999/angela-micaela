@@ -175,6 +175,7 @@ body {
     height: auto;
     margin-right: auto;
     transform: rotate(30deg);
+    z-index: -1;
 }
 
 #melody-image {
