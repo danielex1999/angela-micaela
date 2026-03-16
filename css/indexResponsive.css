@@ -50,14 +50,22 @@
     }
 
     .momentos-images {
-    grid-template-columns: repeat(2, 150px);
-    gap: 30px;
-}
+        grid-template-columns: repeat(2, 150px);
+        gap: 30px;
+    }
 
     #center-size-images {
         width: 80%;
     }
-    p{
+
+    p {
+        font-size: 14px;
+    }
+
+    .img-container-moment p {
         font-size: 12px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
     }
 }

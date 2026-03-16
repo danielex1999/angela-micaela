@@ -9,8 +9,13 @@
     src: url(../assets/fonts/Dancing/DancingScript-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: Sour;
+    src: url(../assets/fonts/Sour/SourVariableFont_wght.ttf);
+}
+
 body {
-    font-family: 'Dancing', cursive;
+    font-family: 'Sour', cursive;
     width: 100%;
     background-color: #f0f0f0;
     color: #333333;

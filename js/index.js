@@ -23,7 +23,8 @@ const imagenes = [
     "🍴 Arandanos.jpeg",
     "🎈 Globos.jpeg",
     "🌺 Lirios.jpeg",
-    "🛫 Primer vuelo.jpeg"
+    "🛫 Primer vuelo.jpeg",
+    "🌼 Flores Bouquet.jpeg"
 ];
 
 
