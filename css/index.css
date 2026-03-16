@@ -23,7 +23,7 @@ body {
 
 }
 
-.dancing{
+.dancing {
     font-family: 'Dancing', cursive;
 }
 
@@ -260,4 +260,83 @@ iframe {
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 10px;
+}
+
+
+
+/* Style for the messages section */
+#center-size-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messages-container {
+    margin-bottom: 50px;
+}
+
+.messageGridContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.div3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.div4 {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.div5 {
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.div6 {
+    grid-area: 2 / 4 / 3 / 6;
+}
+
+.div7 {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.div8 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.div9 {
+    grid-area: 3 / 4 / 4 / 6;
+}
+
+.messageGridContainer .message {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Dancing, cursive;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#messages-section-notes {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: max-content;
+    text-align: center;
+    cursor: pointer;
 }
