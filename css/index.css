@@ -19,7 +19,7 @@ body {
     width: 100%;
     background-color: #f0f0f0;
     color: #333333;
-    height: 100vh;
+    height: auto;
 
 }
 
@@ -271,12 +271,14 @@ iframe {
 
 /* Style for the messages section */
 
-#left-size-messages, #right-size-messages {
+#left-size-messages,
+#right-size-messages {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 10%;
 }
+
 #center-size-messages {
     display: flex;
     flex-direction: column;
@@ -358,8 +360,84 @@ iframe {
     cursor: pointer;
 }
 
-#lirios,#rosas,#margaritas {
+#lirios,
+#rosas,
+#margaritas {
     max-width: 60%;
     height: auto;
     margin: 10px;
+}
+
+/* Style for the navbar */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 0 10px 20px rgba(255, 29, 202, 0.5);
+    backdrop-filter: blur(10px);
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1600px;
+}
+
+.navbar-logo {
+    font-family: Dancing, cursive;
+    font-size: 24px;
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-container .navbar-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar-container .navbar-menu li a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover {
+    background-color: #ff82a4;
+    color: #ffffff;
+    border: 2px solid #ff82a4;
+}
+
+.navbar-toggle {
+    background: none;
+    display: none;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333333;
+    transition: all 0.3s ease;
 }

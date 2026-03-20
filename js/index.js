@@ -1,9 +1,11 @@
 function abrirNotas() {
     document.getElementById("notes-popup").style.display = "flex";
+    document.getElementsByClassName("navbar")[0].style.display = "none";
 }
 
 function cerrarNotas() {
     document.getElementById("notes-popup").style.display = "none";
+    document.getElementsByClassName("navbar")[0].style.display = "flex";
 }
 
 
@@ -49,3 +51,11 @@ for (let i = 0; i < cantidad; i++) {
 
     contenedor.appendChild(div);
 }
+
+const navBarToogle = document.querySelector(".navbar-toggle");
+const navBarMenu = document.querySelector(".navbar-menu");
+
+navBarToogle.addEventListener("click", () => {
+    navBarMenu.classList.toggle("active");
+    navBarToogle.classList.toggle("active");
+});    
