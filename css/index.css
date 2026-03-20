@@ -380,7 +380,7 @@ iframe {
     top: 0;
     z-index: 1000;
     background-color: transparent;
-    box-shadow: 0 10px 20px rgba(255, 29, 202, 0.5);
+    box-shadow: 0 10px 20px rgba(255, 191, 186, 0.9);
     backdrop-filter: blur(10px);
 }
 .navbar-container {
