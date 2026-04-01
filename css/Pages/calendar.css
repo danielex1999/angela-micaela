@@ -376,7 +376,8 @@ li {
 }
 
 .timeslots li {
-    height: 60px;
+    height: 240px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -394,21 +395,20 @@ li {
 .event-container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 120px);
     grid-area: main;
-    position: relative;
+    gap: 1px;
 }
 
 
 .slot {
     display: flex;
-    position: absolute;
+    position: static;
     flex-direction: column;
     align-items: center;
-    border-radius: 0 5px 5px 0;
-    padding: 0 10px;
-    inline-size: min-content;
-    min-width: 10vw;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
     background-color: var(--color1);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     cursor: pointer;
@@ -417,7 +417,7 @@ li {
 
 .slot::before {
     content: "";
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 4px;
