@@ -361,13 +361,13 @@ li {
 
 .grid-container {
     margin-top: 50px;
-    padding: 30px;
+    padding: 0;
     display: grid;
-    grid-template-columns: 80px 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 50px 1fr;
     gap: 0;
     grid-template-areas:
-        "header header"
+        ". header"
         "timeslots-container main";
     background-color: var(--main);
 }
@@ -387,6 +387,17 @@ li {
 .weekdays li {
     padding: 10px 5px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-text {
+    display: inline;
+}
+
+.short-text {
+    display: none;
 }
 
 .short-text {
@@ -396,33 +407,38 @@ li {
 .header {
     grid-area: header;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px 0 0;
 }
 
 .timeslots-container {
-    grid-area: timeslots-container;
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 10px 0 0;
     border-right: 2px solid #ddd;
+    margin-top: 50px;
 }
-
+.timeslots-container
 .timeslots {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 15px;
+    padding: 0;
     width: 100%;
 }
 
 .timeslots li {
-    height: 240px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     color: #666;
     width: 100%;
+    padding-right: 5px;
 }
 
 .timeslots li::after {
@@ -433,7 +449,7 @@ li {
 .event-container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(32, 60px);
+    grid-template-rows: repeat(32, 40px);
     grid-area: main;
     gap: 1px;
     background-color: #fafafa;
@@ -509,23 +525,23 @@ li {
     }
 
     .grid-container {
-        grid-template-columns: 60px 1fr;
+        grid-template-columns: 50px 1fr;
     }
 
     .timeslots li {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .weekdays li {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
     .grid-container {
         min-width: 100vw;
-        grid-template-columns: 50px 1fr;
-        padding: 15px;
+        grid-template-columns: 45px 1fr;
+        grid-template-rows: 45px 1fr;
     }
 
     .full-text {
@@ -533,21 +549,26 @@ li {
     }
 
     .short-text {
-        display: block;
+        display: inline;
     }
 
     .weekdays li {
-        font-size: 11px;
-        padding: 8px 2px;
+        font-size: 10px;
+        padding: 5px 2px;
     }
 
     .timeslots li {
-        font-size: 10px;
-        padding-right: 5px;
+        font-size: 9px;
+        height: 80px;
+    }
+
+    .event-container {
+        grid-template-rows: repeat(32, 60px);
+        padding: 5px;
     }
 
     .slot {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .slot span:nth-child(2) {
