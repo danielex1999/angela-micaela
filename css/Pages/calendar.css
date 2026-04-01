@@ -394,7 +394,7 @@ li {
 .event-container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(660, 1fr);
+    grid-template-rows: repeat(32, 1fr);
     grid-area: main;
     position: relative;
 }
@@ -477,4 +477,17 @@ li {
     .slot span:nth-child(2) {
         display: none;
     }
+}
+
+.slot-title{
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.slot-time {
+    font-size: 8px;
+}
+.aula{
+    font-size: 10px;
+    font-weight: bold;
 }
