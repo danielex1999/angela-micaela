@@ -104,10 +104,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .nav-container h1 {
     font-size: 30px;
+    margin: 0;
+}
+
+.add-event-btn {
+    background-color: var(--color1);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-event-btn:hover {
+    background-color: #0085cc;
+    box-shadow: 0 4px 12px rgba(1, 190, 254, 0.3);
+    transform: translateY(-2px);
 }
 
 .btn-container .btn {
@@ -150,12 +170,14 @@ body {
 .save-modal-container,
 .edit-modal-container {
     background-color: var(--main);
-    width: 30vw;
+    width: 90vw;
+    max-width: 450px;
     height: auto;
     text-align: center;
     position: relative;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .add-modal-title {
@@ -412,7 +434,14 @@ li {
     background-color: var(--color1);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
     cursor: pointer;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    text-align: center;
+}
 
+.slot:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 60px;
 }
 
 .slot::before {
@@ -459,6 +488,12 @@ li {
     .slot {
         min-width: 7vw;
     }
+
+    .add-modal-container,
+    .save-modal-container,
+    .edit-modal-container {
+        width: 85vw;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -477,17 +512,35 @@ li {
     .slot span:nth-child(2) {
         display: none;
     }
+
+    .add-modal-container,
+    .save-modal-container,
+    .edit-modal-container {
+        width: 90vw;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .slot-title{
     font-size: 11px;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    word-break: break-word;
 }
 
 .slot-time {
     font-size: 8px;
+    margin: 3px 0;
+    opacity: 0.9;
 }
-.aula{
+
+.aula {
     font-size: 10px;
     font-weight: bold;
+    margin: 3px 0 0 0;
+    opacity: 0.85;
 }
