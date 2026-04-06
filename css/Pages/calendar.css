@@ -642,3 +642,36 @@ li {
     margin: 2px 0 0 0;
     opacity: 0.85;
 }
+
+#popup-img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;  
+}
+
+#psicopatology{
+ background-color: #e12da2 !important;
+ color: #fff !important;
+}
+
+#exp-psicologia{
+    background-color: #914da7 !important;
+    color: #fff !important;
+}
+
+#semi-invest{
+    background-color: #ff82a4 !important;
+    color: #fff !important;
+}
+
+#estadistica{
+    background-color: #ffc471 !important;
+    color: #fff !important;
+}
+
+#discusion{
+    background-color: #4f53b3 !important;
+    color: #fff !important;
+}
