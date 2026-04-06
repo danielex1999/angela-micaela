@@ -420,8 +420,8 @@ li {
     border-right: 2px solid #ddd;
     margin-top: 50px;
 }
-.timeslots-container
-.timeslots {
+
+.timeslots-container .timeslots {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -588,6 +588,7 @@ li {
 }
 
 @media only screen and (max-width: 768px) {
+
     .grid-container {
         grid-template-columns: 45px 1fr;
         padding: 10px;
@@ -606,8 +607,14 @@ li {
 
     .event-container {
         grid-template-rows: repeat(32, 50px);
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 
+    .container{
+        overflow-x: auto;
+        white-space: nowrap;
+    }
     .slot-title {
         font-size: 10px;
     }
@@ -621,7 +628,7 @@ li {
     }
 }
 
-.slot-title{
+.slot-title {
     font-size: 12px;
     margin: 0 0 3px 0;
     font-weight: 600;
@@ -643,35 +650,35 @@ li {
     opacity: 0.85;
 }
 
-#popup-img{
+#popup-img {
     width: 30px;
     height: 30px;
     position: absolute;
     top: 5px;
-    right: 5px;  
+    right: 5px;
 }
 
-#psicopatology{
- background-color: #e12da2 !important;
- color: #fff !important;
+#psicopatology {
+    background-color: #e12da2 !important;
+    color: #fff !important;
 }
 
-#exp-psicologia{
+#exp-psicologia {
     background-color: #914da7 !important;
     color: #fff !important;
 }
 
-#semi-invest{
+#semi-invest {
     background-color: #ff82a4 !important;
     color: #fff !important;
 }
 
-#estadistica{
+#estadistica {
     background-color: #ffc471 !important;
     color: #fff !important;
 }
 
-#discusion{
+#discusion {
     background-color: #4f53b3 !important;
     color: #fff !important;
 }
