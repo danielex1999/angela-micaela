@@ -607,8 +607,8 @@ li {
 
     .event-container {
         grid-template-rows: repeat(32, 50px);
-        overflow-x: auto;
-        overflow-y: hidden;
+        /* overflow-x: auto;
+        overflow-y: hidden; */
     }
 
 
