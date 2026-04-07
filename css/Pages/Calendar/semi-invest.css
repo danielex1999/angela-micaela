@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ff82a3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.lirio li {
+    list-style: none;
+    /* quitar puntos normales */
+    background-image: url('/assets/icons/lirio.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    /* aquí defines el tamaño pequeño */
+    padding-left: 20px;
+    color: white;
+    font-size: 18px;
+    /* espacio para la imagen */
+}
+
+li {
+    padding: 10px;
+    width: max-content;
+    margin-bottom: 10px;
+}
