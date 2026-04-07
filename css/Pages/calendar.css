@@ -97,7 +97,7 @@ body {
 }
 
 .container {
-    margin: 50px;
+    margin: 20px;
 }
 
 .nav-container {
@@ -109,7 +109,7 @@ body {
 }
 
 .nav-container h1 {
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
 }
 
@@ -272,7 +272,7 @@ input[type="checkbox"]:checked {
 }
 
 .active {
-    background-color: white
+    background-color: var(--active-bg-color);
 }
 
 .add-modal-start-time,
@@ -513,7 +513,8 @@ li {
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
+
     .slot {
         min-width: 7vw;
     }
@@ -537,7 +538,8 @@ li {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
+
     .grid-container {
         min-width: 100vw;
         grid-template-columns: 45px 1fr;
@@ -587,8 +589,7 @@ li {
     }
 }
 
-@media only screen and (max-width: 768px) {
-
+@media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 45px 1fr;
         padding: 10px;
@@ -607,12 +608,9 @@ li {
 
     .event-container {
         grid-template-rows: repeat(32, 50px);
-        /* overflow-x: auto;
-        overflow-y: hidden; */
+        overflow-x: auto;
+        overflow-y: hidden;
     }
-
-
-
 
     .container {
         overflow-x: auto;
@@ -629,6 +627,35 @@ li {
 
     .aula {
         font-size: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.7rem;
+    }
+
+    .event-container {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(32, 20px);
+    }
+
+    .timeslots li {
+        font-size: 9px;
+        height: 40px;
+        padding-right: 3px;
+    }
+
+    .weekdays{
+        grid-template-columns: repeat(7, 100px);
+    }
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
     }
 }
 
@@ -728,30 +755,5 @@ li {
 
     .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-@media only screen and (min-width: 400px) {
-    .navbar-container {
-        padding: 0 1rem;
-    }
-
-    .navbar-logo {
-        font-size: 1.7rem;
-    }
-
-    .event-container {
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(32, 20px);
-    }
-
-    .timeslots li {
-        font-size: 8px;
-        height: 40px !important;
-    }
-
-    .navbar-container .navbar-menu li a {
-        font-size: 1.2rem;
-        padding: 3px 15px;
     }
 }
