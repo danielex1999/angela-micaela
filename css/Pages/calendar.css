@@ -651,11 +651,12 @@ li {
     }
 
     .slot-title{
-        font-size: 9px;
+        font-size: 9px !important;
+        line-height: 1.1 !important;
     }
     #popup-img {
-        width: 15px;
-        height: 15px;
+        width: 15px !important;
+        height: 15px !important ;
     }
 
     .weekdays {
