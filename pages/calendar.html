@@ -207,7 +207,8 @@
 
                     </div>
                 </div>
-                <div class="slot" id="psicopatology" onclick="abrirNotasPsicopatologia()" style="grid-area: 22 / 3 / 25 / 4; background-color: #fdffb6">
+                <div class="slot" id="psicopatology" onclick="abrirNotasPsicopatologia()"
+                    style="grid-area: 22 / 3 / 25 / 4; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/img/pop-up up.png" alt="" srcset="">
                     <p class="slot-title">Psicopatología</p>
                     <p class="slot-time">5:20 PM - 06:49 PM</p>
@@ -221,7 +222,8 @@
 
                     </div>
                 </div>
-                <div class="slot" id="estadistica" onclick="abrirNotasEstadistica()" style="grid-area: 25 / 3 / 31 / 4; background-color: #fdffb6">
+                <div class="slot" id="estadistica" onclick="abrirNotasEstadistica()"
+                    style="grid-area: 25 / 3 / 31 / 4; background-color: #fdffb6">
                     <img id="popup-img"
                         src="/assets/img/[CITYPNG.COM]Cutest My Melody Sanrio Bunny Transparent PNG - 800x800.png"
                         alt="" srcset="">
@@ -237,17 +239,35 @@
 
                     </div>
                 </div>
-                <div class="slot" id="exp-psicologia" style="grid-area: 22 / 4 / 25 / 5; background-color: #fdffb6">
+                <div class="slot" id="exp-psicologia" onclick="abrirNotasPsicoExperimental()"
+                    style="grid-area: 22 / 4 / 25 / 5; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/icons/Cute_Melody_2D.webp" alt="" srcset="">
                     <p class="slot-title">Psicología Experimental</p>
                     <p class="slot-time">5:20 PM - 06:49 PM</p>
                     <p class="aula">Aula B706</p>
                 </div>
-                <div class="slot" id="exp-psicologia" style="grid-area: 25 / 4 / 28 / 5; background-color: #fdffb6">
+                <div id="notes-popup-psico-experimental" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="cerrarNotasPsicoExperimental()">✖</span>
+
+                        <iframe src="/pages/Calendar/psico-experimental.html" class="popup-frame"></iframe>
+
+                    </div>
+                </div>
+                <div class="slot" id="exp-psicologia" onclick="abrirNotasPsicoExperimental()"
+                    style="grid-area: 25 / 4 / 28 / 5; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/icons/Cute_Melody_2D.webp" alt="" srcset="">
                     <p class="slot-title">Psicología Experimental</p>
                     <p class="slot-time">7:00 PM - 08:29 PM</p>
                     <p class="aula">Aula B706</p>
+                </div>
+                <div id="notes-popup-psico-experimental" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="cerrarNotasPsicoExperimental()">✖</span>
+
+                        <iframe src="/pages/Calendar/psico-experimental.html" class="popup-frame"></iframe>
+
+                    </div>
                 </div>
                 <div class="slot" id="discusion" style="grid-area: 1 / 5 / 4 / 6; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/img/kittycat.gif" alt="" srcset="">
@@ -255,7 +275,8 @@
                     <p class="slot-time">7:00 AM - 08:29 AM</p>
                     <p class="aula">Sala Meet</p>
                 </div>
-                <div class="slot" id="psicopatology" onclick="abrirNotasPsicopatologia()" style="grid-area: 4 / 3 / 8 / 4; background-color: #fdffb6">
+                <div class="slot" id="psicopatology" onclick="abrirNotasPsicopatologia()"
+                    style="grid-area: 4 / 3 / 8 / 4; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/img/pop-up up.png" alt="">
                     <p class="slot-title">Psicopatología</p>
                     <p class="slot-time">9:30 AM - 11:00 AM</p>
@@ -269,11 +290,20 @@
 
                     </div>
                 </div>
-                <div class="slot" id="exp-psicologia" style="grid-area: 28 / 6 / 31 / 7; background-color: #fdffb6">
+                <div class="slot" id="exp-psicologia" onclick="abrirNotasPsicoExperimental()"
+                    style="grid-area: 28 / 6 / 31 / 7; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/icons/Cute_Melody_2D.webp" alt="" srcset="">
                     <p class="slot-title">Psicología Experimental</p>
                     <p class="slot-time">8:30 PM - 09:59 PM</p>
                     <p class="aula">Sala Meet</p>
+                </div>
+                <div id="notes-popup-psico-experimental" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="cerrarNotasPsicoExperimental()">✖</span>
+
+                        <iframe src="/pages/Calendar/psico-experimental.html" class="popup-frame"></iframe>
+
+                    </div>
                 </div>
             </div>
         </div>

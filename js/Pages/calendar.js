@@ -58,4 +58,22 @@ function cerrarNotasEstadistica() {
     for (let i = 0; i < slots.length; i++) {
         slots[i].style.display = "flex";
     }
-}   
+}
+
+/*Abrir Notas Psicologia Experimental*/
+function abrirNotasPsicoExperimental() {
+    document.getElementById("notes-popup-psico-experimental").style.display = "flex";
+    document.getElementsByClassName("navbar")[0].style.display = "none";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "none";
+    }
+
+}
+
+function cerrarNotasPsicoExperimental() {
+    document.getElementById("notes-popup-psico-experimental").style.display = "none";
+    document.getElementsByClassName("navbar")[0].style.display = "flex";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "flex";
+    }
+}
