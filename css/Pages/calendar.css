@@ -839,3 +839,8 @@ li {
         font-size: 10px
     }
 }
+
+#events{
+    background-color: #ffd0cc;
+    color: #fff;
+}
