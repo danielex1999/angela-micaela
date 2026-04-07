@@ -650,9 +650,18 @@ li {
         padding-right: 3px;
     }
 
-    .weekdays{
+    .slot-title{
+        font-size: 9px;
+    }
+    #popup-img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .weekdays {
         grid-template-columns: repeat(7, 100px);
     }
+
     .navbar-container .navbar-menu li a {
         font-size: 1.2rem;
         padding: 3px 15px;
