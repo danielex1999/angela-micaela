@@ -46,15 +46,8 @@ p {
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 16px 16px;
-    /* aquí defines el tamaño pequeño */
-    padding-left: 20px;
+    padding-left: 25px;
     color: white;
     font-size: 18px;
-    /* espacio para la imagen */
-}
-
-li {
-    padding: 10px;
-    width: max-content;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
