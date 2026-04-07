@@ -221,13 +221,21 @@
 
                     </div>
                 </div>
-                <div class="slot" id="estadistica" style="grid-area: 25 / 3 / 31 / 4; background-color: #fdffb6">
+                <div class="slot" id="estadistica" onclick="abrirNotasEstadistica()" style="grid-area: 25 / 3 / 31 / 4; background-color: #fdffb6">
                     <img id="popup-img"
                         src="/assets/img/[CITYPNG.COM]Cutest My Melody Sanrio Bunny Transparent PNG - 800x800.png"
                         alt="" srcset="">
                     <p class="slot-title">Estadística General</p>
                     <p class="slot-time">7:00 PM - 09:59 PM</p>
                     <p class="aula">Sala Meet</p>
+                </div>
+                <div id="notes-popup-estadistica" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="cerrarNotasEstadistica()">✖</span>
+
+                        <iframe src="/pages/Calendar/estadistica.html" class="popup-frame"></iframe>
+
+                    </div>
                 </div>
                 <div class="slot" id="exp-psicologia" style="grid-area: 22 / 4 / 25 / 5; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/icons/Cute_Melody_2D.webp" alt="" srcset="">

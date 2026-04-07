@@ -41,3 +41,21 @@ function cerrarNotasPsicopatologia() {
         slots[i].style.display = "flex";
     }
 }
+
+/*Abrir Notas Estadistica*/
+
+function abrirNotasEstadistica() {
+    document.getElementById("notes-popup-estadistica").style.display = "flex";
+    document.getElementsByClassName("navbar")[0].style.display = "none";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "none";
+    }
+}
+
+function cerrarNotasEstadistica() {
+    document.getElementById("notes-popup-estadistica").style.display = "none";
+    document.getElementsByClassName("navbar")[0].style.display = "flex";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "flex";
+    }
+}   
