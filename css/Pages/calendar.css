@@ -772,3 +772,65 @@ li {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+
+/*Pop Ups*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #FFF5B7;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.popup-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 20px;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+/* Para iPhone 14 */
+
+@media (max-width: 390px) {
+    .popup-content {
+        width: 90%;
+        height: 80%;
+    }
+
+    .close{
+        font-size: 10px
+    }
+}
