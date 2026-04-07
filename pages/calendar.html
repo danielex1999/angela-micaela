@@ -269,11 +269,19 @@
 
                     </div>
                 </div>
-                <div class="slot" id="discusion" style="grid-area: 1 / 5 / 4 / 6; background-color: #fdffb6">
+                <div class="slot" id="discusion" onclick="abrirNotasDiscapacidad()" style="grid-area: 1 / 5 / 4 / 6; background-color: #fdffb6">
                     <img id="popup-img" src="/assets/img/kittycat.gif" alt="" srcset="">
                     <p class="slot-title">Discapacidad e Inclusión</p>
                     <p class="slot-time">7:00 AM - 08:29 AM</p>
                     <p class="aula">Sala Meet</p>
+                </div>
+                <div id="notes-popup-discapacidad" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="cerrarNotasDiscapacidad()">✖</span>
+
+                        <iframe src="/pages/Calendar/discapacidad.html" class="popup-frame"></iframe>
+
+                    </div>
                 </div>
                 <div class="slot" id="psicopatology" onclick="abrirNotasPsicopatologia()"
                     style="grid-area: 4 / 3 / 8 / 4; background-color: #fdffb6">

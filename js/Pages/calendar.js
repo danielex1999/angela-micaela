@@ -77,3 +77,22 @@ function cerrarNotasPsicoExperimental() {
         slots[i].style.display = "flex";
     }
 }
+
+/*Abrir Notas Discapacidad e Inclusión*/
+
+
+function abrirNotasDiscapacidad() {
+    document.getElementById("notes-popup-discapacidad").style.display = "flex";
+    document.getElementsByClassName("navbar")[0].style.display = "none";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "none";
+    }
+}
+
+function cerrarNotasDiscapacidad() {
+    document.getElementById("notes-popup-discapacidad").style.display = "none";
+    document.getElementsByClassName("navbar")[0].style.display = "flex";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "flex";
+    }
+}
