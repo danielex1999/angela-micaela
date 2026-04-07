@@ -787,8 +787,12 @@ li {
     align-items: center;
 }
 
-.popup-content {
+
+#notes-popup-semi-invest .popup-frame {
     background: #FFF5B7;
+
+}
+.popup-content {
     position: relative;
     width: 90%;
     height: 90%;
@@ -817,8 +821,8 @@ li {
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 25px;
+    right: 25px;
 
 }
 
@@ -830,7 +834,7 @@ li {
         height: 80%;
     }
 
-    .close{
+    .close {
         font-size: 10px
     }
 }
