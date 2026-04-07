@@ -96,6 +96,20 @@ body {
     background-color: var(--main);
 }
 
+.slot-time {
+    font-size: 9px;
+    margin: 2px 0;
+    opacity: 0.9;
+    line-height: 1.1;
+}
+
+.aula {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 2px 0 0 0;
+    opacity: 0.85;
+}
+
 .container {
     margin: 20px;
 }
@@ -650,15 +664,19 @@ li {
         padding-right: 3px;
     }
 
-    .slot-title{
-        font-size: 9px !important;
-        line-height: 1.1 !important;
-        white-space: nowrap;
-        margin: 0 !important;
+    .slot-title {
+        font-size: 8px;
+        margin: 0;
+        font-weight: 600;
+        line-height: 1.2;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
+
     #popup-img {
         width: 15px !important;
-        height: 15px !important ;
+        height: 15px !important;
     }
 
     .weekdays {
@@ -669,29 +687,13 @@ li {
         font-size: 1.2rem;
         padding: 3px 15px;
     }
+
+    .slot {
+        min-height: 40px;
+    }
 }
 
-.slot-title {
-    font-size: 12px;
-    margin: 0 0 3px 0;
-    font-weight: 600;
-    word-break: break-word;
-    line-height: 1.2;
-}
 
-.slot-time {
-    font-size: 9px;
-    margin: 2px 0;
-    opacity: 0.9;
-    line-height: 1.1;
-}
-
-.aula {
-    font-size: 10px;
-    font-weight: 600;
-    margin: 2px 0 0 0;
-    opacity: 0.85;
-}
 
 #popup-img {
     width: 30px;
