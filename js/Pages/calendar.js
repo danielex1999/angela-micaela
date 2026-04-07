@@ -96,3 +96,78 @@ function cerrarNotasDiscapacidad() {
         slots[i].style.display = "flex";
     }
 }
+
+
+
+/* Lógica para mostrar eventos dinámicamente */
+
+const hoy = new Date(); // Simulamos que hoy es el 10 de abril de 2026
+
+// Evento de Pestañas
+const eventos = [
+    {
+        fecha: new Date("2026-04-09"),
+        titulo: "Retoque de Pestañas",
+        inicio: "9:00 AM",
+        fin: "11:00 AM",
+        lugar: "Blossom Beauty",
+        img: "/assets/img/pestanas.png"
+    },
+    {
+        fecha: new Date("2026-04-15"),
+        titulo: "Tercer tratamiento de Balayage",
+        inicio: "3:00 PM",
+        fin: "5:00 PM",
+        lugar: "Blossom Beauty",
+        img: "/assets/icons/imagen_2026-03-08_204039656-removebg-preview.png"
+    }
+];
+
+// Semana domingo → sábado
+const inicioSemana = new Date(hoy);
+inicioSemana.setDate(hoy.getDate() - hoy.getDay());
+
+const finSemana = new Date(inicioSemana);
+finSemana.setDate(inicioSemana.getDate() + 6);
+
+function calcularGridArea(fechaEvento, inicio, fin) {
+    const dia = fechaEvento.getDay() + 1;
+
+    function horaAFila(horaStr) {
+        // Convierte "9:30 AM" a fila
+        const [time, period] = horaStr.split(" ");
+        let [h, m] = time.split(":").map(Number);
+        if (period === "PM" && h !== 12) h += 12;
+        if (period === "AM" && h === 12) h = 0;
+        // Cada media hora = 1 fila, fila 1 = 7:00 AM
+        return (h - 7) * 2 + (m === 30 ? 2 : 1);
+    }
+
+    const inicioFila = horaAFila(inicio);
+    const finFila = horaAFila(fin);
+
+    return `${inicioFila} / ${dia + 1} / ${finFila} / ${dia + 1}`;
+}
+
+
+// Procesar cada evento del array
+eventos.forEach(evento => {
+    evento.gridArea = calcularGridArea(evento.fecha, evento.inicio, evento.fin);
+    console.log(evento.gridArea); // "4 / 5 / 8 / 5"
+    
+    // Si está en esta semana → crear div
+    if (evento.fecha >= inicioSemana && evento.fecha <= finSemana) {
+        const createEvent = document.createElement("div");
+        createEvent.className = "slot";
+        createEvent.id = "events";
+        createEvent.style.gridArea = evento.gridArea;
+
+        createEvent.innerHTML = `
+        <img id="popup-img" src="${evento.img}" alt="">
+        <p class="slot-title">${evento.titulo}</p>
+        <p class="slot-time">${evento.inicio} - ${evento.fin}</p>
+        <p class="aula">${evento.lugar}</p>
+      `;
+        document.getElementById("event-container").appendChild(createEvent);
+    }
+});
