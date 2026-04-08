@@ -108,8 +108,8 @@ const eventos = [
     {
         fecha: new Date("2026-04-09"),
         titulo: "Retoque de Pestañas",
-        inicio: "9:00 AM",
-        fin: "11:00 AM",
+        inicio: "11:00 AM",
+        fin: "1:00 PM",
         lugar: "Blossom Beauty",
         img: "/assets/img/pestanas.png"
     },
@@ -118,8 +118,16 @@ const eventos = [
         titulo: "Tercer tratamiento de Balayage",
         inicio: "3:00 PM",
         fin: "5:00 PM",
-        lugar: "Blossom Beauty",
+        lugar: "-----",
         img: "/assets/icons/imagen_2026-03-08_204039656-removebg-preview.png"
+    },
+    {
+        fecha: new Date("2026-04-09"),
+        titulo: "Examen de Ingles (Oral)",
+        inicio: "9:00 AM",
+        fin: "11:00 AM",
+        lugar: "Sala Meet",
+        img: "/assets/icons/rosa.png"
     }
 ];
 
@@ -171,3 +179,10 @@ eventos.forEach(evento => {
         document.getElementById("event-container").appendChild(createEvent);
     }
 });
+
+/* Semana de Estudios*/
+const numberWeek = document.getElementById("number-week");
+const startOfYear = new Date(hoy.getFullYear(), 0, 1);
+const pastDaysOfYear = (hoy - startOfYear) / 86400000;
+const weekNumber = Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7)-12;
+numberWeek.textContent = `Semana 0${weekNumber}`;
