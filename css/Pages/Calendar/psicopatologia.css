@@ -16,12 +16,6 @@ body {
     padding: 20px;
 }
 
-h1 {
-    color: #fff;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 img {
     width: 25%;
     max-width: 600px;
@@ -37,6 +31,13 @@ p {
     font-size: 20px;
     margin-top: 20px;
     color: #fff;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .lirio li {
@@ -58,11 +59,8 @@ p {
         width: 50%;
     }
 
-    h1 {
-        color: #fff;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 24px;
+h1{
+        padding: 10px;
     }
 
     p {

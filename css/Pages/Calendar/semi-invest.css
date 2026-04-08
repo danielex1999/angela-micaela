@@ -16,11 +16,6 @@ body {
     padding: 20px;
 }
 
-h1 {
-    color: #fff;
-    margin-bottom: 20px;
-    text-align: center;
-}
 
 img {
     width: 80%;
@@ -52,17 +47,21 @@ p {
     margin-bottom: 20px;
 }
 
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
 @media (max-width: 600px) {
 
     img {
         width: 70%;
     }
 
-    h1 {
-        color: #fff;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 24px;
+h1{
+        padding: 10px;
     }
 
     p {
