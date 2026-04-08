@@ -78,8 +78,22 @@ function cerrarNotasPsicoExperimental() {
     }
 }
 
-/*Abrir Notas Discapacidad e Inclusión*/
+function cerrarTodo() {
+    cerrarNotasSeminario();
+    cerrarNotasPsicopatologia();
+    cerrarNotasEstadistica();
+    cerrarNotasPsicoExperimental();
+    cerrarNotasDiscapacidad();
+}
 
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        cerrarTodo();
+    }
+});
+
+
+/*Abrir Notas Discapacidad e Inclusión*/
 
 function abrirNotasDiscapacidad() {
     document.getElementById("notes-popup-discapacidad").style.display = "flex";
@@ -162,7 +176,7 @@ function calcularGridArea(fechaEvento, inicio, fin) {
 eventos.forEach(evento => {
     evento.gridArea = calcularGridArea(evento.fecha, evento.inicio, evento.fin);
     console.log(evento.gridArea); // "4 / 5 / 8 / 5"
-    
+
     // Si está en esta semana → crear div
     if (evento.fecha >= inicioSemana && evento.fecha <= finSemana) {
         const createEvent = document.createElement("div");
@@ -184,5 +198,5 @@ eventos.forEach(evento => {
 const numberWeek = document.getElementById("number-week");
 const startOfYear = new Date(hoy.getFullYear(), 0, 1);
 const pastDaysOfYear = (hoy - startOfYear) / 86400000;
-const weekNumber = Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7)-12;
+const weekNumber = Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7) - 12;
 numberWeek.textContent = `Semana 0${weekNumber}`;
