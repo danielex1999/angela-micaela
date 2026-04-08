@@ -115,7 +115,7 @@ function cerrarNotasDiscapacidad() {
 
 /* Lógica para mostrar eventos dinámicamente */
 
-const hoy = new Date("2026-04-13"); // Simulamos que hoy es el 10 de abril de 2026
+const hoy = new Date(); // Simulamos que hoy es el 10 de abril de 2026
 
 // Evento de Pestañas
 const eventos = [
