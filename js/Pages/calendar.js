@@ -142,6 +142,14 @@ const eventos = [
         fin: "11:00 AM",
         lugar: "Sala Meet",
         img: "/assets/icons/rosa.png"
+    },
+    {
+        fecha: new Date("2026-04-11"),
+        titulo: "Lavar Mochila y Ropa",
+        inicio: "9:00 AM",
+        fin: "1:00 PM",
+        lugar: "---",
+        img: "https://cdn-icons-png.flaticon.com/512/760/760609.png"
     }
 ];
 
