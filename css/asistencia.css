@@ -411,4 +411,7 @@ input[type="checkbox"] {
         padding: 8px 15px;
         font-size: 14px;
     }
+    input[type="checkbox"] {
+        transform: scale(0.8);
+    }
 }
