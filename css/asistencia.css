@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sour', cursive;
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+@font-face {
+    font-family: Dancing;
+    src: url(../assets/fonts/Dancing/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Sour;
+    src: url(../assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth\,wght.ttf);
+}
+
+/* ========================================
+   NAVBAR STYLES
+   ======================================== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 0 10px 20px rgba(255, 191, 186, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1600px;
+}
+
+.navbar-logo {
+    font-family: Dancing, cursive;
+    font-size: 24px;
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-container .navbar-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar-container .navbar-menu li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover {
+    background-color: #ff82a4;
+    color: #ffffff;
+    border: 2px solid #ff82a4;
+}
+
+.navbar-toggle {
+    background: none;
+    display: none;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333333;
+    transition: all 0.3s ease;
+}
+
+
+/* ========================================
+   Contenedor de asistencia
+   ======================================== */
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 50px;
+
+}
+
+.tabla-asistencia {
+    width: 90%;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   TABLA DE ASISTENCIA
+   ======================================== */
+
+.generated-table {
+    min-width: 1200px;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: sans-serif;
+    table-layout: fixed;
+}
+
+/* CELDAS GENERALES */
+.generated-table th,
+.generated-table td {
+    border: 1px solid rgb(255 191 186 / 40%);
+    padding: 10px 12px;
+    text-align: center;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* SOLO TD (no header) */
+.generated-table td {
+    background-color: white;
+}
+
+/* HEADER GENERAL */
+.generated-table th {
+    background-color: rgba(255, 191, 186, 0.9);
+    color: #1d3557;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* QUITAR STICKY TOP DE HEADERS CON COLSPAN (Semana X) */
+.generated-table thead tr:nth-child(1) th[colspan] {
+    position: static;
+    z-index: auto;
+}
+
+/* SUBHEADERS (Mie / Vie) STICKY TOP */
+.generated-table thead tr:nth-child(2) th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+/* COLUMNAS FIJAS: N° Y ALUMNOS */
+.generated-table .col-fixed-numero {
+    position: sticky;
+    left: 0;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    background: white;
+    z-index: 3;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.generated-table .col-fixed-alumnos {
+    position: sticky;
+    left: 60px;
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+    background: white;
+    z-index: 3;
+    text-align: left;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* ESQUINA SUPERIOR (N° Y ALUMNOS EN HEADER) */
+.generated-table thead .col-fixed-numero,
+.generated-table thead .col-fixed-alumnos {
+    z-index: 4;
+    background-color: rgba(255, 191, 186, 1);
+    text-align: center;
+}
+
+/* COLUMNAS DINÁMICAS (Mie / Vie) */
+.generated-table td:not(:nth-child(1)):not(:nth-child(2)) {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+
+/* HEADERS DE SEMANA */
+.generated-table th[colspan] {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.generated-table th[colspan="2"] {
+    width: 120px;
+}
+
+/* HOVER EN FILAS */
+.generated-table tbody tr:hover td {
+    background-color: #f9f9f9;
+}
+
+/* CHECKBOX */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* ========================================
+   Botones de acción
+   ======================================== */
+
+#guardar-btn {
+    background-color: #ff82a4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Sour', cursive;
+    transition: background-color 0.3s ease;
+}
+
+#guardar-btn:hover {
+    background-color: #ff5c7a;
+}
+
+
+#generar-btn {
+    background-color: #2a9d8f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Sour', cursive;
+    transition: background-color 0.3s ease;
+}
+
+#generar-btn:hover {
+    background-color: #1f6e63;
+}
+
+#generar-btn img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+/* ========================================
+   ESTILOS RESPONSIVE
+======================================== */
+
+
+@media (max-width: 800px) {
+    .navbar {
+        backdrop-filter: none;
+        background-color: rgba(255, 255, 255, 0.85);
+        height: 60px;
+    }
+
+    .navbar-container .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0px;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(255, 191, 186, 0.9);
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .navbar-container .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.7rem;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+
+    .generated-table .col-fixed-alumnos{
+        width: 100px;
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 12px;
+        left: 50px; /* Adjust left position to match the width of N° column */
+        transform: none; /* Remove transform to prevent rendering issues on mobile */
+        will-change: auto;
+    }
+
+    .generated-table th, .generated-table td{
+        padding: 4px 6px;
+    }
+
+     .generated-table td:not(:nth-child(1)):not(:nth-child(2)) {
+        width: 40px;
+        min-width: 40px;
+        max-width: 40px;
+    }
+
+    .generated-table .col-fixed-numero{
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+        font-size: 11px;
+        transform: none; /* Remove transform to prevent rendering issues on mobile */
+        will-change: auto;
+    }
+}

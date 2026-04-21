@@ -1,6 +1,5 @@
 const navBarToogle = document.querySelector(".navbar-toggle");
 const navBarMenu = document.querySelector(".navbar-menu");
-const slots = document.getElementsByClassName("slot");
 
 navBarToogle.addEventListener("click", () => {
     navBarMenu.classList.toggle("active");

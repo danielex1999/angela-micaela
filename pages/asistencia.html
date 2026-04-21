@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alumnos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/asistencia.css">
+    <link rel="icon" type="image/png" href="../assets/icons/melody.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/index.html" class="navbar-logo">Angela Micaela</a>
+            <button class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/calendar.html">Calendario</a></li>
+                <li><a href="/pages/asistencia.html">Asistencia</a></li>
+                <li><a href="/pages/contact.html">☕</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <div class="title">
+            <h1>Asistencia de Alumnos <span id="finSemana"></span></h1>
+            <button id="guardar-btn">Guardar Asistencia</button>
+            <button onclick="exportarExcel()" id="generar-btn"><img src="../assets/icons/excel.png" alt="">Generar
+                Excel</button>
+        </div>
+        <div class="tabla-asistencia">
+            <table class="table-style-normal generated-table">
+                <thead id="thead-asistencia">
+                </thead>
+                <tbody id="tbody-asistencia">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="../js/Pages/asistencia.js"></script>
+</body>
+
+</html>
