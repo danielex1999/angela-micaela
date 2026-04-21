@@ -120,19 +120,19 @@ const hoy = new Date(); // Simulamos que hoy es el 10 de abril de 2026
 // Evento de Pestañas
 const eventos = [
     {
-        fecha: new Date("2026-04-09"),
-        titulo: "Retoque de Pestañas",
+        fecha: new Date("2026-04-16"),
+        titulo: "Retoque de uñas acrilicas",
+        inicio: "9:00 AM",
+        fin: "11:00 AM",
+        lugar: "Blossom Beauty",
+        img: "/assets/icons/9727798.png"
+    },
+    {
+        fecha: new Date("2026-04-16"),
+        titulo: "Tercer tratamiento de Balayage",
         inicio: "11:00 AM",
         fin: "1:00 PM",
         lugar: "Blossom Beauty",
-        img: "/assets/img/pestanas.png"
-    },
-    {
-        fecha: new Date("2026-04-15"),
-        titulo: "Tercer tratamiento de Balayage",
-        inicio: "3:00 PM",
-        fin: "5:00 PM",
-        lugar: "-----",
         img: "/assets/icons/imagen_2026-03-08_204039656-removebg-preview.png"
     },
     {
@@ -150,6 +150,22 @@ const eventos = [
         fin: "1:00 PM",
         lugar: "---",
         img: "https://cdn-icons-png.flaticon.com/512/760/760609.png"
+    },
+    {
+        fecha: new Date("2026-04-16"),
+        titulo: "Comprar Serums",
+        inicio: "2:00 PM",
+        fin: "2:30 PM",
+        lugar: "Pañitos desmsaquillantes",
+        img: "https://images.rappi.pe/marketplace/aruma_encalada-1755885135900.png"
+    },
+    {
+        fecha: new Date("2026-04-16"),
+        titulo: "Comprar Locion Corporal",
+        inicio: "1:00 PM",
+        fin: "1:30 PM",
+        lugar: "Victoria's Secret",
+        img: "https://w7.pngwing.com/pngs/743/815/png-transparent-victorias-secret-logo-fashion-clothes.png"
     }
 ];
 
