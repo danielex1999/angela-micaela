@@ -124,14 +124,10 @@ function generarTabla(alumnos) {
 document.getElementById("guardar-btn").addEventListener("click", () => {
 
     const checkboxes = document.querySelectorAll("input[type='checkbox']");
-
     const asistencias = [];
 
     checkboxes.forEach(cb => {
-
-        // 🔥 SOLO los marcados
         if (cb.checked) {
-
             asistencias.push({
                 fecha: cb.dataset.fecha,
                 asistio: true,
@@ -140,10 +136,7 @@ document.getElementById("guardar-btn").addEventListener("click", () => {
                 }
             });
         }
-
     });
-
-    console.log(asistencias);
 
     fetch(`${API_URL}/asistencia/bulk`, {
         method: "POST",
@@ -151,6 +144,25 @@ document.getElementById("guardar-btn").addEventListener("click", () => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(asistencias)
+    })
+    .then(res => {
+        if (!res.ok) throw new Error("Error al guardar");
+        return res.json();
+    })
+    .then(data => {
+        Swal.fire({
+            icon: "success",
+            title: "Guardado",
+            text: "Se guardó exitosamente"
+        });
+    })
+    .catch(err => {
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "No se pudo guardar"
+        });
+        console.error(err);
     });
 
 });
