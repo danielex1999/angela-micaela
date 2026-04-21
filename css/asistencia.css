@@ -342,11 +342,11 @@ input[type="checkbox"] {
 
     /* Ajustes para la tabla en pantallas pequeñas */
     .generated-table .col-fixed-alumnos{
-        width: 70px;
-        min-width: 70px;
-        max-width: 70px;
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
         font-size: 12px;
-        left: 43px; /* Adjust left position to match the width of N° column */
+        left: 50px; /* Adjust left position to match the width of N° column */
         transform: none; /* Remove transform to prevent rendering issues on mobile */
         will-change: auto;
     }
