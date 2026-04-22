@@ -100,18 +100,22 @@ function generarTabla(alumnos) {
             const checkedMie = estaMarcado(alumno.id, fechaMie) ? "checked" : "";
             const checkedVie = estaMarcado(alumno.id, fechaVie) ? "checked" : "";
 
+            const disabled = i === weekNumber ? "" : "disabled";
+
             row += `
         <td>
             <input type="checkbox"
                 data-fecha="${fechaMie}"
                 data-alumno="${alumno.id}"
-                ${checkedMie}>
+                ${checkedMie}
+                ${disabled}>
         </td>
         <td>
             <input type="checkbox"
                 data-fecha="${fechaVie}"
                 data-alumno="${alumno.id}"
-                ${checkedVie}>
+                ${checkedVie}
+                ${disabled}>
         </td>
     `;
         }
@@ -145,25 +149,25 @@ document.getElementById("guardar-btn").addEventListener("click", () => {
         },
         body: JSON.stringify(asistencias)
     })
-    .then(res => {
-        if (!res.ok) throw new Error("Error al guardar");
-        return res.json();
-    })
-    .then(data => {
-        Swal.fire({
-            icon: "success",
-            title: "Guardado",
-            text: "Se guardó exitosamente"
+        .then(res => {
+            if (!res.ok) throw new Error("Error al guardar");
+            return res.json();
+        })
+        .then(data => {
+            Swal.fire({
+                icon: "success",
+                title: "Guardado",
+                text: "Se guardó exitosamente"
+            });
+        })
+        .catch(err => {
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "No se pudo guardar"
+            });
+            console.error(err);
         });
-    })
-    .catch(err => {
-        Swal.fire({
-            icon: "error",
-            title: "Error",
-            text: "No se pudo guardar"
-        });
-        console.error(err);
-    });
 
 });
 //Cargar asistencia al cargar la página
