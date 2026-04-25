@@ -199,8 +199,7 @@ function calcularGridArea(fechaEvento, inicio, fin) {
 // Procesar cada evento del array
 eventos.forEach(evento => {
     evento.gridArea = calcularGridArea(evento.fecha, evento.inicio, evento.fin);
-    console.log(evento.gridArea); // "4 / 5 / 8 / 5"
-
+    
     // Si está en esta semana → crear div
     if (evento.fecha >= inicioSemana && evento.fecha <= finSemana) {
         const createEvent = document.createElement("div");
