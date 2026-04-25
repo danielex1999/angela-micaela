@@ -1,3 +1,7 @@
+/* ========================================
+   RESET & FONT IMPORTS
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +16,25 @@
 @font-face {
     font-family: Sour;
     src: url(../assets/fonts/Sour_Gummy/SourGummy-VariableFont_wdth\,wght.ttf);
+}
+
+/* ========================================
+   BODY & GLOBAL STYLES
+   ======================================== */
+
+body {
+    font-family: 'Sour', cursive;
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #333333;
+    height: auto;
+}
+
+iframe {
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    max-width: 90%;
 }
 
 /* ========================================
@@ -92,26 +115,7 @@
 }
 
 /* ========================================
-   BODY STYLES
-   ======================================== */
-
-body {
-    font-family: 'Sour', cursive;
-    width: 100%;
-    background-color: #f0f0f0;
-    color: #333333;
-    height: auto;
-}
-
-iframe {
-    margin-top: 20px;
-    border: none;
-    border-radius: 12px;
-    max-width: 90%;
-}
-
-/* ========================================
-   CLASSES
+   UTILITY CLASSES
    ======================================== */
 
 .dancing {
@@ -126,6 +130,10 @@ iframe {
     align-items: center;
     flex-direction: column;
 }
+
+/* ========================================
+   LAYOUT CLASSES
+   ======================================== */
 
 .main-container {
     display: flex;
@@ -143,6 +151,18 @@ iframe {
     justify-content: center;
     width: 90%;
 }
+
+.messages-container {
+    margin-bottom: 50px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================
+   MOMENTOS SECTION STYLES
+   ======================================== */
 
 .img-container-moment {
     display: flex;
@@ -182,13 +202,9 @@ iframe {
     margin-bottom: 10px;
 }
 
-.messages-container {
-    margin-bottom: 50px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* ========================================
+   MESSAGES GRID STYLES
+   ======================================== */
 
 .messageGridContainer {
     display: grid;
@@ -245,7 +261,7 @@ iframe {
 }
 
 /* ========================================
-   IDS
+   ID SELECTORS - CARDS & NOTES
    ======================================== */
 
 #cards {
@@ -269,18 +285,48 @@ iframe {
     margin-bottom: 20px;
 }
 
-#left-size {
-    width: 15%;
-    height: 100%;
+#first-section-notes,
+#second-section-notes {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+#first-section-notes:hover {
+    background-color: #e0e0e0;
+}
+
+#messages-section-notes {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: max-content;
+    text-align: center;
+    cursor: pointer;
+}
+
+#main-section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
-#left-size-images,
-#right-size-images {
-    width: 10%;
+/* ========================================
+   ID SELECTORS - LAYOUT WIDTHS
+   ======================================== */
+
+#left-size {
+    width: 15%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -306,14 +352,13 @@ iframe {
     align-items: center;
 }
 
-#main-section {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+#left-size-images,
+#right-size-images {
+    width: 10%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -326,19 +371,28 @@ iframe {
     justify-content: center;
 }
 
-#first-section-notes,
-#second-section-notes {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    width: auto;
-    text-align: center;
-    cursor: pointer;
+#left-size-messages,
+#right-size-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
 }
 
-#first-section-notes:hover {
-    background-color: #e0e0e0;
+#center-size-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+/* ========================================
+   ID SELECTORS - IMAGES
+   ======================================== */
+
+#main-image {
+    max-width: 70%;
+    height: auto;
 }
 
 #carta-image {
@@ -359,6 +413,14 @@ iframe {
     max-width: 60%;
     height: auto;
     margin-left: auto;
+}
+
+#lirios,
+#rosas,
+#margaritas {
+    max-width: 60%;
+    height: auto;
+    margin: 10px;
 }
 
 #vela-image {
@@ -388,11 +450,6 @@ iframe {
     z-index: -1;
 }
 
-#main-image {
-    max-width: 70%;
-    height: auto;
-}
-
 #chocolate-cake-image {
     max-width: 40%;
     height: auto;
@@ -410,35 +467,185 @@ iframe {
     height: auto;
 }
 
-#left-size-messages,
-#right-size-messages {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 10%;
+
+/* ========================================
+   RESPONSIVE - MAX WIDTH 1440px
+   ======================================== */
+
+@media (max-width: 1440px) {
+    #center-size-images {
+        width: 70%;
+    }
+
+    .momentos-images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .momentos-images img {
+        width: 100%;
+    }
+
+    #chocolate-cake-image,
+    #maki-image,
+    #girasol {
+        margin-left: 0;
+        margin-right: 0;
+        margin: 10px;
+    }
 }
 
-#center-size-messages {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 75%;
+/* ========================================
+   RESPONSIVE - MAX WIDTH 1024px (Tablets)
+   ======================================== */
+
+@media (max-width: 1024px) {
+    iframe#spotify-iframe {
+        display: none;
+    }
+
+    img#spotify-code {
+        display: block !important;
+        max-width: 70%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
 }
 
-#messages-section-notes {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    width: max-content;
-    text-align: center;
-    cursor: pointer;
+/* ========================================
+   RESPONSIVE - MAX WIDTH 800px (Tablets)
+   ======================================== */
+
+@media (max-width: 800px) {
+    .navbar {
+        backdrop-filter: none;
+        background-color: rgba(255, 255, 255, 0.85);
+        height: 60px;
+    }
+
+    .navbar-container .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0px;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(255, 191, 186, 0.9);
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .navbar-container .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
-#lirios,
-#rosas,
-#margaritas {
-    max-width: 60%;
-    height: auto;
-    margin: 10px;
+/* ========================================
+   RESPONSIVE - MAX WIDTH 600px (Mobile)
+   ======================================== */
+
+@media (max-width: 600px) {
+    #left-size {
+        width: 20%;
+    }
+
+    #center-size {
+        width: 50%;
+    }
+
+    #right-size {
+        width: 20%
+    }
+
+    iframe#spotify-iframe {
+        display: none;
+    }
+
+    img#spotify-code {
+        display: block !important;
+        max-width: 70%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #left-size-images,
+    #right-size-images,
+    #left-size-messages,
+    #right-size-messages {
+        display: none;
+    }
+
+    .momentos-images {
+        grid-template-columns: repeat(2, 150px);
+        gap: 30px;
+    }
+
+    #center-size-images {
+        width: 80%;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .img-container-moment p {
+        font-size: 12px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .messageGridContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .messageGridContainer>div {
+        grid-area: auto;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MAX WIDTH 400px (Mobile)
+   ======================================== */
+
+@media (max-width: 400px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.7rem;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
 }

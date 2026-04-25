@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Sour', cursive;
-    background-color: #f0f0f0;
+    background-color: #fff8f4;
     color: #333333;
 }
 
@@ -102,7 +102,7 @@ body {
     flex-direction: column;
 
     min-height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #fff8f4;
     padding: 20px;
 }
 

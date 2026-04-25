@@ -160,7 +160,7 @@ const eventos = [
         img: "https://images.rappi.pe/marketplace/aruma_encalada-1755885135900.png"
     },
     {
-        fecha: new Date("2026-04-16"),
+        fecha: new Date("2026-04-25"),
         titulo: "Comprar Locion Corporal",
         inicio: "1:00 PM",
         fin: "1:30 PM",
