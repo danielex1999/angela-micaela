@@ -79,7 +79,7 @@
 :root {
     --main: #fff8f4;
     --secondary: #B0C4DE;
-    --color1: rgb(1, 190, 254);
+    --color1: #f8b9ce;
     --color2: rgb(255, 221, 0);
     --color3: rgb(255, 125, 0);
     --color4: rgb(255, 0, 109);
@@ -145,8 +145,8 @@ body {
 }
 
 .add-event-btn:hover {
-    background-color: #0085cc;
-    box-shadow: 0 4px 12px rgba(1, 190, 254, 0.3);
+    background-color: rgba(255, 191, 186, 0.753);
+    box-shadow: 0 4px 12px rgba(255, 191, 186, 0.3);
     transform: translateY(-2px);
 }
 

@@ -219,7 +219,7 @@ function renderEventos(eventos) {
             createEvent.style.gridArea = gridArea;
 
             createEvent.innerHTML = `
-                <img src="${evento.img}" alt="">
+                <img id="popup-img" src="${evento.img}" alt="">
                 <p class="slot-title">${evento.titulo}</p>
                 <p class="slot-time">${inicio} - ${fin}</p>
                 <p class="aula">${evento.lugar}</p>
