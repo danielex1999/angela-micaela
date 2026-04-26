@@ -32,7 +32,8 @@ function guardarEvento(e) {
         inicio: inicio,
         fin: fin,
         lugar: document.querySelector("[name='lugar']").value,
-        img: "/assets/icons/default.png"
+        img: "/assets/icons/default.png",
+        color: document.querySelector("[name='color']").value,
     };
 
     const API_URL = "https://attendance-system-1-vkq7.onrender.com";

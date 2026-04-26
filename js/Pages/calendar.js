@@ -215,7 +215,8 @@ function renderEventos(eventos) {
         if (fecha >= inicioSemana && fecha <= finSemana) {
 
             const createEvent = document.createElement("div");
-            createEvent.className = "slot backend"; // 👈 importante
+            createEvent.className = "slot backend";
+            createEvent.style.backgroundColor = evento.color;
             createEvent.style.gridArea = gridArea;
 
             createEvent.innerHTML = `

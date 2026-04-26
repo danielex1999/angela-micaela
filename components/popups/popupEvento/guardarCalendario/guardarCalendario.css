@@ -70,6 +70,13 @@ input[type="text"] {
     color: #5a5a5a;
 }
 
+input[type="color"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px;
+    color: #5a5a5a;
+}
+
 button {
     margin-top: 20px;
     background-color: rgb(243, 243, 243);
