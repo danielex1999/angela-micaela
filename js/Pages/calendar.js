@@ -1,3 +1,10 @@
+window.addEventListener("message", function (event) {
+    if (event.data === "eventoGuardado") {
+        cerrarPopup();     // 👈 cerrar iframe
+        cargarEventos();   // 👈 refrescar calendario
+    }
+});
+
 const navBarToogle = document.querySelector(".navbar-toggle");
 const navBarMenu = document.querySelector(".navbar-menu");
 const slots = document.getElementsByClassName("slot");
@@ -84,6 +91,7 @@ function cerrarTodo() {
     cerrarNotasEstadistica();
     cerrarNotasPsicoExperimental();
     cerrarNotasDiscapacidad();
+    cerrarPopup();
 }
 
 document.addEventListener("keydown", function (event) {
@@ -117,58 +125,6 @@ function cerrarNotasDiscapacidad() {
 
 const hoy = new Date(); // Simulamos que hoy es el 10 de abril de 2026
 
-// Evento de Pestañas
-const eventos = [
-    {
-        fecha: new Date("2026-04-16"),
-        titulo: "Retoque de uñas acrilicas",
-        inicio: "9:00 AM",
-        fin: "11:00 AM",
-        lugar: "Blossom Beauty",
-        img: "/assets/icons/9727798.png"
-    },
-    {
-        fecha: new Date("2026-04-16"),
-        titulo: "Tercer tratamiento de Balayage",
-        inicio: "11:00 AM",
-        fin: "1:00 PM",
-        lugar: "Blossom Beauty",
-        img: "/assets/icons/imagen_2026-03-08_204039656-removebg-preview.png"
-    },
-    {
-        fecha: new Date("2026-04-09"),
-        titulo: "Examen de Ingles (Oral)",
-        inicio: "9:00 AM",
-        fin: "11:00 AM",
-        lugar: "Sala Meet",
-        img: "/assets/icons/rosa.png"
-    },
-    {
-        fecha: new Date("2026-04-11"),
-        titulo: "Lavar Mochila y Ropa",
-        inicio: "9:00 AM",
-        fin: "1:00 PM",
-        lugar: "---",
-        img: "https://cdn-icons-png.flaticon.com/512/760/760609.png"
-    },
-    {
-        fecha: new Date("2026-04-16"),
-        titulo: "Comprar Serums",
-        inicio: "2:00 PM",
-        fin: "2:30 PM",
-        lugar: "Pañitos desmsaquillantes",
-        img: "https://images.rappi.pe/marketplace/aruma_encalada-1755885135900.png"
-    },
-    {
-        fecha: new Date("2026-04-25"),
-        titulo: "Comprar Locion Corporal",
-        inicio: "1:00 PM",
-        fin: "1:30 PM",
-        lugar: "Victoria's Secret",
-        img: "https://w7.pngwing.com/pngs/743/815/png-transparent-victorias-secret-logo-fashion-clothes.png"
-    }
-];
-
 // Semana domingo → sábado
 const inicioSemana = new Date(hoy);
 inicioSemana.setDate(hoy.getDate() - hoy.getDay());
@@ -196,30 +152,78 @@ function calcularGridArea(fechaEvento, inicio, fin) {
 }
 
 
-// Procesar cada evento del array
-eventos.forEach(evento => {
-    evento.gridArea = calcularGridArea(evento.fecha, evento.inicio, evento.fin);
-    
-    // Si está en esta semana → crear div
-    if (evento.fecha >= inicioSemana && evento.fecha <= finSemana) {
-        const createEvent = document.createElement("div");
-        createEvent.className = "slot";
-        createEvent.id = "events";
-        createEvent.style.gridArea = evento.gridArea;
-
-        createEvent.innerHTML = `
-        <img id="popup-img" src="${evento.img}" alt="">
-        <p class="slot-title">${evento.titulo}</p>
-        <p class="slot-time">${evento.inicio} - ${evento.fin}</p>
-        <p class="aula">${evento.lugar}</p>
-      `;
-        document.getElementById("event-container").appendChild(createEvent);
-    }
-});
-
 /* Semana de Estudios*/
 const numberWeek = document.getElementById("number-week");
 const startOfYear = new Date(hoy.getFullYear(), 0, 1);
 const pastDaysOfYear = (hoy - startOfYear) / 86400000;
 const weekNumber = Math.ceil((pastDaysOfYear + startOfYear.getDay() + 1) / 7) - 12;
 numberWeek.textContent = `Semana 0${weekNumber}`;
+
+
+/*Abrir Agregar Evento*/
+function popupAgregarEvento() {
+    document.getElementById("popup-agregar-evento").style.display = "flex";
+    document.getElementsByClassName("navbar")[0].style.display = "none";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "none";
+    }
+}
+
+function cerrarPopup() {
+    document.getElementById("popup-agregar-evento").style.display = "none";
+    document.getElementsByClassName("navbar")[0].style.display = "flex";
+    for (let i = 0; i < slots.length; i++) {
+        slots[i].style.display = "flex";
+    }
+}
+const API_URL = "https://attendance-system-1-vkq7.onrender.com";
+
+function cargarEventos() {
+    fetch(`${API_URL}/api/eventos`)
+        .then(res => res.json())
+        .then(data => {
+            renderEventos(data);
+        })
+        .catch(err => console.error(err));
+}
+
+function formatearHora(hora) {
+    let [h, m] = hora.split(":");
+    h = parseInt(h);
+
+    const ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12 || 12;
+
+    return `${h}:${m} ${ampm}`;
+}
+
+function renderEventos(eventos) {
+
+    eventos.forEach(evento => {
+
+        const fecha = new Date(evento.fecha);
+
+        const inicio = formatearHora(evento.inicio);
+        const fin = formatearHora(evento.fin);
+
+        const gridArea = calcularGridArea(fecha, inicio, fin);
+
+        if (fecha >= inicioSemana && fecha <= finSemana) {
+
+            const createEvent = document.createElement("div");
+            createEvent.className = "slot backend"; // 👈 importante
+            createEvent.style.gridArea = gridArea;
+
+            createEvent.innerHTML = `
+                <img src="${evento.img}" alt="">
+                <p class="slot-title">${evento.titulo}</p>
+                <p class="slot-time">${inicio} - ${fin}</p>
+                <p class="aula">${evento.lugar}</p>
+            `;
+
+            document.getElementById("event-container").appendChild(createEvent);
+        }
+    });
+}
+
+document.querySelectorAll(".backend").forEach(e => e.remove());

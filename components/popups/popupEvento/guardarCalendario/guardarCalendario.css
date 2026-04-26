@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Dancing;
+    src: url(/assets/fonts/Dancing/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Sour;
+    src: url(/assets/fonts/Sour_Gummy/SourGummy-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffd0cc;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #474444;
+    text-align: center;
+    font-size: 24px;
+    font-family: Dancing, cursive;
+}
+
+img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Estilos para el formulario de agregar evento */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    color: #5a5a5a;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Sour, cursive;
+}
+
+
+.input-field {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    color: #5a5a5a;
+}
+
+button {
+    margin-top: 20px;
+    background-color: rgb(243, 243, 243);
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: Sour, cursive;
+}
+
+@media (max-width: 600px) {
+
+    img {
+        width: 50%;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .lirio li {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    h1 {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .input-field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}

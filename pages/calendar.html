@@ -31,114 +31,16 @@
         <nav class="nav-container">
             <h1>Calendario de Universidad</h1>
             <h2 id="number-week"></h2>
-            <button class="btn add-event-btn" id="add-event-btn">+ Agregar evento</button>
+            <button class="btn add-event-btn" id="add-event-btn" onclick="popupAgregarEvento()">+ Agregar
+                evento</button>
+            <div id="popup-agregar-evento" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="cerrarPopup()">✖</span>
+                    <iframe src="/components/popups/popupEvento/guardarCalendario/guardarCalendario.html"
+                        class="popup-frame"></iframe>
+
+                </div>
         </nav>
-
-        <!-- MODAL -->
-        <div class="add-modal-overlay">
-            <div class="add-modal-container">
-                <h2>Add Item</h2>
-
-                <!-- ADD MODAL -->
-                <input class="add-modal-title" type="text" id="add-modal-title" name="title" placeholder="TITLE" />
-
-                <div class="form-days-selection">
-                    <div>
-                        <label class="add-modal-days">
-                            <input type="checkbox" id="add-modal-day" name="checkbox" />
-                            Su
-                        </label>
-                    </div>
-                    <div>
-                        <label class="add-modal-days">
-                            <input type="checkbox" id="add-modal-day" name="checkbox" />
-                            Mo
-                        </label>
-                    </div>
-                    <div>
-                        <label class="add-modal-days">
-                            <input type="checkbox" id="add-modal-day" name="checkbox" />
-                            Tu
-                        </label>
-                    </div>
-                    <div>
-                        <label class="add-modal-days">
-                            <input type="checkbox" id="add-modal-day" name="checkbox" />
-                            We
-                        </label>
-                    </div>
-                    <div>
-                        <label class="add-modal-days">
-                            <input type="checkbox" id="add-modal-day" name="checkbox" />
-                            Th
-                        </label>
-                    </div>
-                    <div>
-                        <label class="add-modal-days">
-                            <input type="checkbox" id="add-modal-day" name="checkbox" />
-                            Fr
-                        </label>
-                    </div>
-                    <div>
-                        <label class="add-modal-days">
-                            <input type="checkbox" id="add-modal-day" name="checkbox" />
-                            Sa
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-color-selection">
-                    <button class="color-btn color1"></button>
-                    <button class="color-btn color2"></button>
-                    <button class="color-btn color3"></button>
-                    <button class="color-btn color4"></button>
-                    <button class="color-btn color5"></button>
-                    <button class="color-btn color6"></button>
-                </div>
-
-                <div class="error-container"></div>
-
-                <div class="time">
-                    <input class="add-modal-start-time" type="time" id="start-time" name="start-time"
-                        placeholder="Start Time" value="08:00" />
-                    <input class="add-modal-end-time" type="time" id="end-time" name="end-time" placeholder="End Time"
-                        value="19:00" />
-                </div>
-
-                <input type="submit" id="add-modal-submit" value="Submit Item" />
-                <button class="close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- SAVE MODAL -->
-        <div class="save-modal-overlay ">
-            <div class="save-modal-container">
-                <h1>Save</h1>
-                <div class="btn-container">
-                    <button class="btn print-btn">Print</button>
-                    <button class="btn download-btn">Download</button>
-                </div>
-                <button class="close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Edit/Delete -->
-        <div class="edit-modal-overlay ">
-            <div class="edit-modal-container">
-                <h1>Edit</h1>
-                <div class="btn-container">
-                    <button class="btn edit-btn">Edit</button>
-                    <button class="btn delete-btn">Delete</button>
-                </div>
-                <button class="close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-
 
         <!-- TIMETABLE -->
         <div class="grid-container" id="grid-container">
@@ -179,9 +81,7 @@
             <div class="event-container" id="event-container">
                 <div class="slot" id="semi-invest" onclick="abrirNotasSeminario()"
                     style="grid-area: 28 / 2 / 31 / 3; background-color: #ffadad">
-                    <img id="popup-img"
-                        src="/assets/img/kittyUnicornio.png"
-                        alt="">
+                    <img id="popup-img" src="/assets/img/kittyUnicornio.png" alt="">
                     <p class="slot-title">Seminario de Investigación</p>
                     <p class="slot-time">8:30 PM - 09:59 PM</p>
                     <p class="aula">Sala Meet</p>
@@ -190,7 +90,8 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasSeminario()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/semi-invest/semi-invest.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/semi-invest/semi-invest.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
@@ -205,7 +106,8 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasPsicopatologia()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/psicopatologia/psicopatologia.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/psicopatologia/psicopatologia.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
@@ -220,15 +122,14 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasPsicopatologia()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/psicopatologia/psicopatologia.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/psicopatologia/psicopatologia.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
                 <div class="slot" id="estadistica" onclick="abrirNotasEstadistica()"
                     style="grid-area: 25 / 3 / 31 / 4; background-color: #fdffb6">
-                    <img id="popup-img"
-                        src="/assets/img/melodyCapita.png"
-                        alt="" srcset="">
+                    <img id="popup-img" src="/assets/img/sanrio-my-melody.gif" alt="" srcset="">
                     <p class="slot-title">Estadística General</p>
                     <p class="slot-time">7:00 PM - 09:59 PM</p>
                     <p class="aula">Sala Meet</p>
@@ -237,13 +138,14 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasEstadistica()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/estadistica/estadistica.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/estadistica/estadistica.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
                 <div class="slot" id="exp-psicologia" onclick="abrirNotasPsicoExperimental()"
                     style="grid-area: 22 / 4 / 25 / 5; background-color: #fdffb6">
-                    <img id="popup-img" src="/assets/icons/melody2D.webp" alt="" srcset="">
+                    <img id="popup-img" src="/assets/img/sanrio-my-melody.gif" alt="" srcset="">
                     <p class="slot-title">Psicología Experimental</p>
                     <p class="slot-time">5:20 PM - 06:49 PM</p>
                     <p class="aula">Aula B706</p>
@@ -252,13 +154,14 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasPsicoExperimental()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/psico-experimental/psico-experimental.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/psico-experimental/psico-experimental.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
                 <div class="slot" id="exp-psicologia" onclick="abrirNotasPsicoExperimental()"
                     style="grid-area: 25 / 4 / 28 / 5; background-color: #fdffb6">
-                    <img id="popup-img" src="/assets/icons/melody2D.webp" alt="" srcset="">
+                    <img id="popup-img" src="/assets/img/sanrio-my-melody.gif" alt="" srcset="">
                     <p class="slot-title">Psicología Experimental</p>
                     <p class="slot-time">7:00 PM - 08:29 PM</p>
                     <p class="aula">Aula B706</p>
@@ -267,7 +170,8 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasPsicoExperimental()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/psico-experimental/psico-experimental.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/psico-experimental/psico-experimental.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
@@ -282,7 +186,8 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasDiscapacidad()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/discapacidad/discapacidad.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/discapacidad/discapacidad.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
@@ -297,13 +202,14 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasPsicopatologia()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/psicopatologia/psicopatologia.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/psicopatologia/psicopatologia.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>
                 <div class="slot" id="exp-psicologia" onclick="abrirNotasPsicoExperimental()"
                     style="grid-area: 28 / 6 / 31 / 7; background-color: #fdffb6">
-                    <img id="popup-img" src="/assets/icons/melody2D.webp" alt="" srcset="">
+                    <img id="popup-img" src="/assets/img/sanrio-my-melody.gif" alt="" srcset="">
                     <p class="slot-title">Psicología Experimental</p>
                     <p class="slot-time">8:30 PM - 09:59 PM</p>
                     <p class="aula">Aula A603</p>
@@ -312,7 +218,8 @@
                     <div class="popup-content">
                         <span class="close" onclick="cerrarNotasPsicoExperimental()">✖</span>
 
-                        <iframe src="/components/popups/popupsCursos/psico-experimental/psico-experimental.html" class="popup-frame"></iframe>
+                        <iframe src="/components/popups/popupsCursos/psico-experimental/psico-experimental.html"
+                            class="popup-frame"></iframe>
 
                     </div>
                 </div>

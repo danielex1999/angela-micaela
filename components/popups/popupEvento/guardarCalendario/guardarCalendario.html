@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/components/popups/popupEvento/guardarCalendario/guardarCalendario.css">
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="guardarEvento(event)">
+            <img src="/assets/img/kittycat.gif" alt="" srcset="">
+            <h1>Guardar Evento</h1>
+            <div class="input-field">
+                <label>Título del Evento:</label><input type="text" name="titulo" placeholder="Título del evento"
+                    required>
+            </div>
+            <div class="input-field">
+                <label>Fecha:</label><input type="date" name="fecha" required>
+            </div>
+            <div class="input-field">
+                <label>Hora de Inicio:</label><input type="time" name="inicio" onchange="ajustarHora(this)" required>
+            </div>
+            <div class="input-field">
+                <label>Hora de Fin:</label><input type="time" name="fin" onchange="ajustarHora(this)" required>
+            </div>
+            <div class="input-field">
+                <label>Lugar del Evento:</label><input type="text" name="lugar" placeholder="Lugar del evento">
+            </div>
+            <button type="submit">Guardar Evento</button>
+        </form>
+    </div>
+</body>
+<script src="guardarCalendario.js"></script>
+</html>
