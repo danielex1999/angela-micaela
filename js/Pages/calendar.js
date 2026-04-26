@@ -5,6 +5,10 @@ window.addEventListener("message", function (event) {
     }
 });
 
+window.onload = function () {
+    cargarEventos();
+}
+
 const navBarToogle = document.querySelector(".navbar-toggle");
 const navBarMenu = document.querySelector(".navbar-menu");
 const slots = document.getElementsByClassName("slot");
