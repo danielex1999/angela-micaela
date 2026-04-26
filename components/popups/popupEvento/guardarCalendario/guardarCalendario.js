@@ -35,7 +35,8 @@ function guardarEvento(e) {
         img: "/assets/icons/default.png"
     };
 
-    fetch("http://localhost:8080/api/eventos", {
+    const API_URL = "https://attendance-system-1-vkq7.onrender.com";
+    fetch(`${API_URL}/api/eventos`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
